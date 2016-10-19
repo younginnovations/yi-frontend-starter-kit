@@ -1,0 +1,13 @@
+//.logo{
+//  background: url("logo.png");
+//  height:100px;
+//  width:200px;
+//  @include hide-text;
+//}
+
+@mixin hide-text{
+  overflow:hidden;
+  white-space: nowrap;
+  text-indent:-9999px;
+  display:block;
+}

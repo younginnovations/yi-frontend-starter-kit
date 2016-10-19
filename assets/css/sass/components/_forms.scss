@@ -1,0 +1,39 @@
+fieldset {
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  font-weight: 600;
+  padding: 0;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  display: block;
+}
+
+textarea {
+  resize: vertical;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  display: inline;
+}
+
+[type="file"] {
+  width: 100%;
+}
+
+select {
+  width: 100%;
+}

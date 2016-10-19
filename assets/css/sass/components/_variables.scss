@@ -1,0 +1,36 @@
+// Breakpoints
+$small-screen: 480px;
+$medium-screen: 768px;
+$large-screen: 1200px;
+$extra-large-screen: 1600px;
+
+// Typography
+$base-font-family: "Open Sans",san-serif;
+
+// Font Sizes
+$base-font-size: 14px;
+
+// Line height
+$base-line-height: 1.5;
+
+// Other Sizes
+$base-border-radius: 4px;
+
+// Base-colors
+$base-color: #333;
+$brand-color: #b30015;
+$secondary-color: #ddd;
+$text_color: #333333;
+$link_color: #001eff;
+
+// Header
+$header-height: 100px;
+$header-background-color: $brand-color;
+
+// Footer
+$footer-height: 200px;
+$footer-background-color: #aaa;
+
+// Border
+$base-border-color: $base-color;
+$base-border: 1px solid $base-border-color;
