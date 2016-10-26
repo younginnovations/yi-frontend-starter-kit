@@ -5,6 +5,38 @@ ol {
   padding: 0;
 }
 
+ul {
+
+  > li {
+
+    > a {
+
+    }
+    &:hover,&:active {
+
+    }
+    &.active {
+
+    }
+  }
+}
+
+ol {
+
+  > li {
+
+    > a {
+
+    }
+    &:hover,&:active {
+
+    }
+    &.active {
+
+    }
+  }
+}
+
 dl {
   margin: 0;
 }

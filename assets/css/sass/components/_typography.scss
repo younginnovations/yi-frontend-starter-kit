@@ -27,3 +27,16 @@ a {
 hr {
 
 }
+
+blockquote {
+
+  &:before {
+
+  }
+  &:after {
+
+  }
+  &+cite {
+
+  }
+}

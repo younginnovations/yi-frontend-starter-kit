@@ -19,6 +19,9 @@ input,
 select,
 textarea {
   display: block;
+  &.error {
+
+  }
 }
 
 textarea {
@@ -28,6 +31,9 @@ textarea {
 [type="checkbox"],
 [type="radio"] {
   display: inline;
+  label {
+
+  }
 }
 
 [type="file"] {
