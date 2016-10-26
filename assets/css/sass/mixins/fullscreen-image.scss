@@ -1,0 +1,15 @@
+
+// div.cover-image{
+// 	@include fullscreen-image('link_to_image.jpg');
+// }
+
+
+@mixin fullscreen-image($image,$height: 100vh, $grstart: rgba(0,0,0,.2),$grend: rgba(0,0,0,.5), $bgPos: center){
+  background: linear-gradient( to bottom, $grstart, $grend), url($image);
+  background-repeat: no-repeat;
+  background-position: $bgPos;
+  background-size: cover;
+  height: 100vh;
+  max-height: $height;
+  
+}
