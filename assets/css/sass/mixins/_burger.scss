@@ -4,21 +4,6 @@
 // Licensed under MIT (http://joren.mit-license.org/)
 //-------------------------------------------------------------------------------------
 
-
-// Burger parts
-//
-// (---) top    -> &::before
-// [---] middle -> &
-// (---) bottom -> &::after
-
-/// Burger
-/// @param {number} $width  [30px] - 宽度
-/// @param {number} $height  [5px] - 高度
-/// @param {Number} $gutter  [3px] - 间距
-/// @param {string} $color  [#000] - 线条颜色
-/// @param {number} $border-radius  [0] - 圆角
-/// @param {number} $transition-duration  [0] - 动效持续时间
-/// @example
 /// //SCSS
 /// .burger {
 ///  @include burger;
@@ -49,7 +34,7 @@
 /// .burger::after {
 ///   top: 8px;
 /// }
-/// @author Joren Van Hee
+
 @mixin burger($width: 30px, $height: 5px, $gutter: 3px, $color: #000, $border-radius: 0, $transition-duration: .3s) {
     $burger-height: $height !global;
     $burger-gutter: $gutter !global;
@@ -91,9 +76,6 @@
     }
 }
 
-
-/// Select parts of the burger
-/// @example
 /// //SCSS
 /// .burger {
 ///  @include burger-top {
@@ -114,7 +96,6 @@
     }
 }
 
-/// @example
 /// //SCSS
 /// .burger {
 ///  @include burger-top {
@@ -130,7 +111,7 @@
         @content;
     }
 }
-/// @example
+
 /// //SCSS
 /// .burger {
 ///  @include burger-middle {
@@ -146,7 +127,7 @@
         @content;
     }
 }
-/// @example
+
 /// //SCSS
 /// .burger {
 ///  @include burger-bottom {
@@ -165,7 +146,6 @@
 
 
 /// Burger animations
-/// @param {String} $color - auto
 @mixin burger-to-cross($color: auto) {
     & {
         background-color: transparent;

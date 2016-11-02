@@ -1,7 +1,3 @@
-/// 元素垂直水平居中
-/// @param  {[string]} $justify      [center] 水平对齐方向,[false] 水平方向不设置
-/// @param  {[string]} $align      [center] 垂直对齐方向,[false] 垂直方向不设置
-/// @example
 /// //SCSS
 /// 
 /// .justify-center {
@@ -15,8 +11,6 @@
 ///     justify-content: center;
 ///     align-items: center;
 /// }
-/// 
-/// @author 大漠
 
 @mixin box-center($justify:center, $align: center) {
     display:flex;
@@ -29,9 +23,6 @@
     }
 }
 
-/// 使用translate实现水平垂直居中
-/// @param {String} $direction [both] - 水平垂直,其它值`horizontal`和`vertical`
-/// @example
 /// //SCSS
 /// .center{
 ///   @include center-translate;

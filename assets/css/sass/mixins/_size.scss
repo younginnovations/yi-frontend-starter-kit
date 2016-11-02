@@ -1,7 +1,3 @@
-/// 元素宽度和高度的设置,当`$width`和`$height`大小一样时，实现一个正方形。
-/// @access public
-/// @author 大漠
-/// @example
 /// //SCSS
 /// 
 /// .square {
@@ -21,10 +17,8 @@
 ///		width: 100px;
 ///	  	height: 50px; 
 ///	}
-/// @link https://gist.github.com/ffd4e5cfcaf9bd23f3e4
-/// @param {number} $width - 盒子宽度
-/// @param {number} $height:$width - 盒子高度
-@mixin size($width, $height:$width){
-	width: $width;
-	height: $height;
+
+@mixin size($width, $height:$width) {
+  width: $width;
+  height: $height;
 }

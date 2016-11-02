@@ -1,0 +1,31 @@
+//Example
+
+//.logo {
+//  background-image: url("img/logo.png");
+//  @include retina("img/logo@2x.png", 100px, 21px);
+//}
+
+//Output
+
+//.logo {
+//  background-image: url("img/logo.png");
+//}
+//@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+//  .logo {
+//    /* Serving HQ image on Retina display */
+//    background-image: url("img/logo@2x.png");
+//    background-size: 100px 21px;
+//  }
+//}
+
+@mixin retina($image, $width, $height) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+  (-o-min-device-pixel-ratio: 2.6/2),
+  (-webkit-min-device-pixel-ratio: 1.3),
+  (min-device-pixel-ratio: 1.3),
+  (min-resolution: 1.3dppx) {
+    /* Serving 2x image on Retina display */
+    background-image: url($image);
+    background-size: $width $height;
+  }
+}

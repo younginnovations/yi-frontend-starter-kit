@@ -1,11 +1,3 @@
-/// 绘制三角形
-/// @param {String} $position 
-/// @param {Number} $caret-width 三角形外宽度
-/// @param {Number} $border-width 三角形内宽度
-/// @param {String} $direction 三角形方向
-/// @param {String} $border-color 边框颜色
-/// @param {String} $background-color 背景颜色
-/// @example
 /// //SCSS
 /// .caret{
 ///   @include caret(absolute,50px,1px,bottom,red,#ccc);
