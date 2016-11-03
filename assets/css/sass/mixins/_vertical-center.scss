@@ -1,0 +1,23 @@
+//Example
+
+//.vc-box {
+//  @include center-vertically;
+//}
+
+//Output
+
+//.vc-box {
+//  position: absolute;
+//  top: 50%;
+//  left: 50%;
+//  -webkit-transform: translate(-50%, -50%);
+//  -ms-transform: translate(-50%, -50%);
+//  transform: translate(-50%, -50%);
+//}
+
+@mixin center-vertically {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include prefix(transform, translate(-50%, -50%), 'webkit' 'ms');
+}

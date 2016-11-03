@@ -1,0 +1,26 @@
+//Example
+
+//@include font-face("MyFont", "path/to/MyFont", $style: normal, $weight: normal);
+
+//Output
+
+//@font-face {
+//  font-family: "MyFont";
+//  src: url("path/to/MyFont.eot");
+//  src: url("path/to/MyFont.eot?#iefix") format("embedded-opentype"), url("path/to/MyFont.woff") format("woff"), url("path/to/MyFont.ttf") format("truetype"), url("path/to/MyFont.svg#MyFont") format("svg");
+//  font-weight: normal;
+//  font-style: normal;
+//}
+
+@mixin font-face($font-name, $file-name, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src: url($file-name + '.eot');
+    src: url($file-name + '.eot?#iefix')  format('embedded-opentype'),
+    url($file-name + '.woff') format('woff'),
+    url($file-name + '.ttf')  format('truetype'),
+    url($file-name + '.svg##{$font-name}')  format('svg');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
