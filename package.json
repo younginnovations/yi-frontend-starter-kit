@@ -5,5 +5,9 @@
   "dependencies": {
     "gulp": "^3.9.1",
     "laravel-elixir": "^6.0.0-2"
+  },
+  "devDependencies": {
+    "laravel-elixir-postcss": "^0.4.1",
+    "lost": "^7.1.1"
   }
 }

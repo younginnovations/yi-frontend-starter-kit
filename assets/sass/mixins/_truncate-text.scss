@@ -1,0 +1,11 @@
+//Truncate-text.scss
+
+@mixin truncateText($overflow: ellipsis){
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: $overflow; // values are: clip, ellipsis, or a string
+}
+
+.example-text {
+  @include truncateText();
+}

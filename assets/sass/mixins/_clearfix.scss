@@ -1,7 +1,4 @@
-//Example
-//.container-with-floated-children {
-//  @extend %clearfix;
-//}
+//Clearfix-Mixin
 
 %clearfix {
   *zoom: 1;
@@ -12,4 +9,9 @@
   &:after {
     clear: both;
   }
+}
+
+//Example
+.example-block {
+  @extend %clearfix;
 }

@@ -1,0 +1,47 @@
+//Breakpoint-mixin
+
+@mixin bp-extra-large {
+  @media only screen and (min-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin bp-large {
+  @media only screen and (min-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  @media only screen and (min-width: 320px) {
+    @content;
+  }
+}
+
+//Example
+.example-sidebar {
+  width: 60%;
+  float: left;
+  margin: 0 2% 0 0;
+  @include bp-small {
+    width: 100%;
+    float: none;
+    margin: 0;
+  }
+}
+
+//CSS
+.example-sidebar {
+  width: 60%;
+  float: left;
+  margin: 0 2% 0 0;
+  @media only screen and (min-width: 320px){
+    .sidebar{width: 100%; float: none; margin: 0;}
+  }
+}
