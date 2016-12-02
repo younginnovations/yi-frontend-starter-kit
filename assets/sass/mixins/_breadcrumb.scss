@@ -1,0 +1,31 @@
+//Breadcrumb
+.breadcrumb {
+  line-height: 1;
+  display: block;
+  margin: 0;
+  vertical-align: middle;
+  font-size: 16px;
+  &__link {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    color: #6f6bef;
+    &.is-active {
+      font-weight: 700;
+      color: #333333;
+    }
+  }
+  &__divider {
+    display: inline-block;
+    opacity: .7;
+    margin: 0 5px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, .4);
+    vertical-align: baseline;
+  }
+  &__icon {
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.4);
+    margin: 0 5px;
+  }
+}

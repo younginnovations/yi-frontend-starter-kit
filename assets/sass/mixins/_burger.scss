@@ -1,0 +1,80 @@
+//Hamburger-Mixin
+
+// Hamburger Settings
+$hamburger-settings-height: 0 !default;
+$hamburger-settings-gutter: 0 !default;
+// Hamburger Generator
+@mixin hamburger($width: 32px,
+$height: 3px,
+$gutter: 5px,
+$color: #000,
+$border-radius: 0,
+$duration: .3s,
+$timing-function: ease) {
+  // Set variables
+  $hamburger-settings-height: $height !global;
+  $hamburger-settings-gutter: $gutter !global;
+  position: relative;
+  margin-top: $height + $gutter;
+  margin-bottom: $height + $gutter;
+  &,
+  &:before,
+  &:after {
+    display: block;
+    width: $width;
+    height: $height;
+    transition: background-color $duration $timing-function, transform $duration $timing-function;
+    @if ($border-radius !=0) {
+      border-radius: $border-radius;
+    }
+    background-color: $color;
+  }
+  &:before,
+  &:after {
+    position: absolute;
+    content: "";
+  }
+  &:before {
+    top: -($height + $gutter);
+  }
+  &:after {
+    top: $height + $gutter;
+  }
+}
+
+// Hamburger Animation
+// ------------------------------------------------------------------------
+@mixin hamburger-animation {
+  background-color: transparent;
+  &:before {
+    transform: translateY($hamburger-settings-gutter + $hamburger-settings-height) rotate(45deg);
+  }
+  &:after {
+    transform: translateY(-($hamburger-settings-gutter + $hamburger-settings-height)) rotate(-45deg);
+  }
+}
+
+//Example
+.menu-bar {
+  @include hamburger(24px,
+          3px,
+          5px,
+          #333,
+  $timing-function: linear);
+}
+.hamburger {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  &.is-open {
+    .menu-bar {
+      @include hamburger-animation();
+    }
+  }
+}
+
+//Js
+//$('.hamburger').on('click',function(){
+//  $(this).toggleClass('is-open');
+//})

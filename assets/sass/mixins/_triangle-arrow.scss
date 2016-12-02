@@ -1,0 +1,156 @@
+/// Triangle mixin
+/// @param {Direction} $direction - Triangle direction, either `top`, `right`, `bottom` or `left`
+
+@mixin triangle($direction,
+$color: currentcolor,
+$size: 1em) {
+  @if not index(top right bottom left,
+  $direction) {
+    @error "Direction must be either `top`, `right`, `bottom` or `left`.";
+  }
+  width: 0;
+  height: 0;
+  content: '';
+  z-index: 2;
+  border-#{opposite-position($direction)}: ($size * 1.5) solid $color;
+  $perpendicular-borders: $size solid transparent;
+  @if $direction==top or $direction==bottom {
+    border-left: $perpendicular-borders;
+    border-right: $perpendicular-borders;
+  } @else if $direction==right or $direction==left {
+    border-bottom: $perpendicular-borders;
+    border-top: $perpendicular-borders;
+  }
+}
+
+//Line-Arrow-mixin
+// for position
+@mixin position($type: null,
+$top: null,
+$right: null,
+$bottom: null,
+$left: null) {
+  position: $type;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+//for arrow
+@mixin arrow-line($direction,
+$size:10px,
+$thin: 1px,
+$color:#000,
+$deg: 45deg) {
+  &:after,
+  &:before {
+    content: '';
+    background-color: $color;
+    @include position(absolute,0,0,0,0);
+    margin: auto;
+  }
+  &:after {
+    transform: rotate($deg);
+  }
+  &:before {
+    transform: rotate(-$deg);
+  }
+  @if ($direction=="top") {
+    &:after,
+    &:before {
+      height: $size;
+      width: $thin;
+      transform-origin: center top;
+    }
+  } @else if ($direction=="bottom") {
+    &:after,
+    &:before {
+      height: $size;
+      width: $thin;
+      transform-origin: center bottom;
+    }
+  } @else if ($direction=="left") {
+    &:after,
+    &:before {
+      height: $thin;
+      width: $size;
+      transform-origin: center left;
+    }
+  } @else if ($direction=="right") {
+    &:after,
+    &:before {
+      height: $thin;
+      width: $size;
+      transform-origin: center right;
+    }
+  }
+}
+
+.arrow-triangle {
+  display: inline-block;
+}
+
+.arrow-top {
+  @include triangle(top,
+          $dark-pink,
+          30px);
+}
+
+.arrow-bottom {
+  @include triangle(bottom,
+          $blue,
+          30px);
+}
+
+.arrow-left {
+  @include triangle(left,
+          $black,
+          30px);
+}
+
+.arrow-right {
+  @include triangle(right,
+          $green,
+          30px);
+}
+
+.arrow-line {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 1px dashed #000;
+  display: inline-block;
+}
+
+.arrow-line-top {
+  @include arrow-line('top',
+          50px,
+          1px,
+          $blue,
+          45deg)
+}
+
+.arrow-line-bottom {
+  @include arrow-line('bottom',
+          50px,
+          1px,
+          $green,
+          45deg)
+}
+
+.arrow-line-left {
+  @include arrow-line('left',
+          50px,
+          1px,
+          $orange,
+          45deg)
+}
+
+.arrow-line-right {
+  @include arrow-line('right',
+          50px,
+          1px,
+          $dark-pink,
+          45deg)
+}
