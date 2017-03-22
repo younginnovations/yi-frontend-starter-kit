@@ -10,9 +10,9 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
 
-    <link rel="stylesheet" href="/assets/css/normalize.css">
-    <link rel="stylesheet" href="/assets/css/app.css">
-    <script src="/assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/app.css">
+    <script src="../js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -25,12 +25,54 @@
 <header role="banner" class="header"></header>
 
 <!-- Main-body-container -->
-<main class="main-container"></main>
+<main class="main-container">
+
+    <div class="grid-wrapper">
+        <div class="grid">
+            <div class="row">
+                <!-- For column width, use col-n-of-p. By default, p can be 4, 8, or 12 -->
+                <div class="col col-2-of-8 col-m-1-of-4 col-s-1-of-2">1</div>
+                <div class="col col-2-of-8 col-m-1-of-4 col-s-1-of-2">2</div>
+                <div class="col col-2-of-8 col-m-1-of-4 col-s-1-of-2">3</div>
+                <div class="col col-2-of-8 col-m-1-of-4 col-s-1-of-2">4</div>
+            </div>
+            <div class="row">
+                <!-- The center class centers the column. -->
+                <div class="col col-7-of-12 center">1</div>
+            </div>
+            <div class="row">
+                <!-- The w-auto class makes the columns share the width that's left over -->
+                <div class="col col-5-of-12">1</div>
+                <div class="col w-auto">2</div>
+                <div class="col w-auto">3</div>
+            </div>
+            <div class="row">
+                <!-- use col-m- and col-s- as well as m-hide, s-hide, m-only and s-only to make your grid responsive -->
+                <div class="col col-2-of-8 col-m-1-of-4 col-s-1-of-2">1</div>
+                <div class="col col-3-of-8 col-m-2-of-4 col-s-1-of-2">2</div>
+                <div class="col col-1-of-8 m-hide">3</div>
+                <div class="col col-2-of-8 col-m-1-of-4 s-hide">4</div>
+            </div>
+            <div class="row">
+                <div class="col col-1-of-4">1</div>
+                <div class="col col-1-of-2">2</div>
+                <div class="col col-1-of-4">3</div>
+            </div>
+            <div class="row">
+                <!-- Pushes and pulls are used in the same way as col-n-of-p. They can also be responsive, like pull-m-1-of-4 -->
+                <div class="col col-1-of-8">1</div>
+                <div class="col col-2-of-8 push-2-of-12">2</div>
+                <div class="col col-3-of-8 pull-1-of-12">3</div>
+            </div>
+        </div>
+    </div>
+
+</main>
 
 <!-- Footer -->
 <footer class="footer"></footer>
 
-<script src="/assets/js/vendor/jquery-1.12.0.min.js"></script>
-<script src="/assets/js/app.js"></script>
+<script src="../js/vendor/jquery-1.8.0.min.js"></script>
+<script src="../js/app.js"></script>
 </body>
 </html>

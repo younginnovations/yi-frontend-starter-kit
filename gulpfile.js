@@ -13,7 +13,10 @@ elixir(function (mix) {
             srcDir: './public/css/postcss/'
         })
         .styles([
-            './assets/sass/vendor/normalize.css'
+            './assets/sass/vendor/normalize.css',
+            './assets/sass/vendor/waffle-grid.min.css',
+            './assets/sass/vendor/font-awesome.min.css',
+            './assets/sass/vendor/font-awesome-animation.css'
         ], './public/css/vendor.css');
 });
 
