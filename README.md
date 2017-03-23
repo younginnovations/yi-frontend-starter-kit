@@ -33,7 +33,7 @@ For production build:
 
 ## Further improvements
 
-We're constantly working on adding new features and improvements. Bug reports and pull requests are welcome.
+We're constantly working on adding new features. Get in touch if you have ideas for improvements. Bug reports and pull requests are welcome.
 
 
 
