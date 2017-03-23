@@ -13,11 +13,11 @@ This starter kit is designed to get you up and running with a bunch of awesome f
 - [**Lost Grid**](http://lostgrid.org) - A grid system based on the flex display property.
 - [**Waffle Grid**](https://lucasgruwez.github.io/waffle-grid/) - An easy to use flexbox grid system
 
-# Installation
+## Installation
 1. `git clone https://github.com/younginnovations/yi-frontend-starter-kit.git`
 2.  `npm install`
 
-# Development
+## Development
 
 Open your favorite terminal and run these commands. 
 - `gulp`
@@ -25,7 +25,7 @@ Open your favorite terminal and run these commands.
 Watch for changes in your files
 -  `gulp watch`
 
-# Production
+## Production
 
 For production build:
 -  `gulp -p`
