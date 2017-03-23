@@ -31,8 +31,9 @@ For production build:
 -  `gulp -p`
 
 
+## Further improvements
 
-
+We're constantly working on adding new features and improvements. Bug reports and pull requests are welcome.
 
 
 
