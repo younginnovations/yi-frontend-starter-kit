@@ -6,6 +6,8 @@
   },
   "devDependencies": {
     "gulp": "^3.9.1",
+    "laravel-elixir-browsersync": "^0.1.5",
+    "laravel-elixir-browsersync-official": "^1.0.0",
     "laravel-elixir-postcss": "^0.4.1",
     "lost": "^7.1.1"
   }

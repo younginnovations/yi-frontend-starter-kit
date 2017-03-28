@@ -27,6 +27,7 @@
 <!-- Main-body-container -->
 <main class="main-container">
 
+    <!--Grid-Layout-->
     <div class="grid-wrapper">
         <div class="grid">
             <div class="row">
@@ -67,6 +68,100 @@
         </div>
     </div>
 
+    <!--Form-Layout-->
+    <div class="form-wrapper">
+        <div class="grid">
+            <label class="label" for="anrede">Anrede</label>
+            <select class="select" id="anrede" name="anrede">
+                <option selected disabled>-</option>
+                <option value="frau">Frau</option>
+                <option value="herr">Herr</option>
+            </select>
+
+            <label class="label" for="wohnort">Wohnort</label>
+            <select class="select" id="wohnort" name="wohnort" disabled>
+                <option value="frau">Deutschland</option>
+                <option value="herr">Frankreich</option>
+            </select>
+
+            <label class="label" for="vorname">Vorname</label>
+            <input class="input" id="vorname" name="vorname" type="text" autocorrect="off" autocomplete="given-name" placeholder="Max">
+
+            <label class="label" for="nachname">Nachname</label>
+            <input class="input" id="nachname" name="nachname" type="text" autocorrect="off" autocomplete="family-name" placeholder="Mustermann">
+
+            <label class="label" for="firma">Firma</label>
+            <input class="input" id="firma" name="firma" type="text" autocorrect="off" autocomplete="organization" placeholder="Musterfirma">
+
+            <label class="label" for="strassehausnummer">Straße / Hausnummer</label>
+            <input class="input" id="strassehausnummer" name="strassehausnummer" type="text" autocorrect="off" autocomplete="address-line1" placeholder="Musterstraße 1">
+
+            <label class="label" for="plz">PLZ</label>
+            <input class="input" id="plz" name="plz" type="text" pattern="\d*" novalidate autocorrect="off" autocomplete="postal-code" placeholder="12345">
+
+            <label class="label" for="ort">Ort</label>
+            <input class="input" id="ort" name="ort" type="text" autocorrect="off" autocomplete="address-level2" placeholder="Musterort">
+
+            <label class="label" for="telefon">Telefon</label>
+            <input class="input" id="telefon" name="telefon" type="tel" autocorrect="off" autocomplete="tel" placeholder="Musterort">
+
+            <label class="label" for="email">E-Mail</label>
+            <input class="input" id="email" name="email" type="email" autocapitalize="off" autocorrect="off" autocomplete="email" placeholder="max@mustermann.de">
+
+            <label class="label" for="countrycode">Country code</label>
+            <input class="input" id="countrycode" name="countrycode" type="text" autocapitalize="off" autocorrect="off" autocomplete="country" placeholder="DE">
+
+            <label class="label" for="countryname">Country name</label>
+            <input class="input" id="countryname" name="countryname" type="text" autocomplete="country" placeholder="Germany">
+
+            <label class="label" for="birthday">Birthday</label>
+            <input class="input" id="birthday" name="birthday" type="date" autocorrect="off" autocomplete="bday" placeholder="YYYY-MM-DD">
+
+            <label class="label" for="fax">Fax</label>
+            <input class="input" id="fax" name="fax" type="tel" autocorrect="off" placeholder="+49 123456" disabled>
+
+            <label class="label" for="fax">File</label>
+            <input class="input" id="file" name="file" type="file">
+
+            <label class="label" for="nachricht">Nachricht</label>
+            <textarea class="input" id="nachricht" name="nachricht" rows="8" cols="40"></textarea>
+
+            <div class="control">
+                <input class="control__input" id="optionone" type="radio" name="option" value="optionone" checked>
+                <label class="control__label" for="optionone">Option One</label>
+            </div>
+
+            <div class="control">
+                <input class="control__input" id="optiontwo" type="radio" name="option" value="optiontwo">
+                <label class="control__label" for="optiontwo">Option Two</label>
+            </div>
+
+            <div class="control">
+                <input class="control__input" id="optionthree" type="radio" name="option" value="optionthree" disabled>
+                <label class="control__label" for="optionthree">Option Three</label>
+            </div>
+
+            <div class="control">
+                <input class="control__input" id="checkone" type="checkbox" name="checkone" value="checkone" checked>
+                <label class="control__label" for="checkone">Check One</label>
+            </div>
+
+            <div class="control">
+                <input class="control__input" id="checktwo" type="checkbox" name="checktwo" value="checktwo">
+                <label class="control__label" for="checktwo">Check Two</label>
+            </div>
+
+            <div class="control">
+                <input class="control__input" id="checkthree" type="checkbox" name="checkthree" value="checkthree" disabled>
+                <label class="control__label" for="checkthree">Check Three</label>
+            </div>
+
+            <div class="control">
+                <input class="control__input" id="checkfour" type="checkbox" name="checkfour" value="checkfour" checked disabled>
+                <label class="control__label" for="checkfour">Check Four</label>
+            </div>
+        </div>
+    </div>
 </main>
 
 <!-- Footer -->

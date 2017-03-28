@@ -18,5 +18,9 @@ elixir(function (mix) {
             './assets/sass/vendor/font-awesome.min.css',
             './assets/sass/vendor/font-awesome-animation.css'
         ], './public/css/vendor.css');
+
+    mix.browserSync({
+        proxy: 'yi-frontend-starter-kit.valet/'
+    });
 });
 

@@ -28,7 +28,7 @@ Watch for changes in your files
 ## Production
 
 For production build:
--  `gulp -p`
+-  `gulp --production`
 
 
 ## Further improvements
