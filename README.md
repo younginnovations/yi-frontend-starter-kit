@@ -1,4 +1,4 @@
-[![N|Solid](http://younginnovations.com.np/images/logo/logo.png)](http://younginnovations.com.np)
+[![N|Solid](http://profile.yipl.com.np/images/yipl.png)](http://younginnovations.com.np)
 
 # YIPL Frontend Starter Kit
 
